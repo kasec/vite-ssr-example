@@ -9,8 +9,6 @@
     "serve": "NODE_ENV=production node server"
   },
   "devDependencies": {
-    "@types/node": "^14.14.24",
-    "@types/vue-router": "^2.0.0",
     "@vitejs/plugin-vue": "^1.0.4",
     "@vue/compiler-sfc": "^3.0.5",
     "@vue/server-renderer": "^3.0.5",

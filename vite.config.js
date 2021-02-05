@@ -5,6 +5,6 @@ export default {
 		minify: false
 	},
 	plugins: [
-		vuePlugin({ ssr: true }),
+		vuePlugin(),
 	]
 }
