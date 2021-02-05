@@ -2,9 +2,11 @@
   "name": "me",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite serve ./dist"
+    "dev": "node server",
+    "build": "yarn build:client && yarn build:server",
+    "build:client": "vite build --ssrManifest --outDir dist/client",
+    "build:server": "vite build --ssr src/entry-server.js --outDir dist/server",
+    "serve": "NODE_ENV=production node server"
   },
   "devDependencies": {
     "@types/node": "^14.14.24",
@@ -12,9 +14,11 @@
     "@vitejs/plugin-vue": "^1.0.4",
     "@vue/compiler-sfc": "^3.0.5",
     "@vue/server-renderer": "^3.0.5",
-    "matched": "^5.0.1",
     "vite": "^2.0.0-beta.64",
+    "express": "^4.17.1",
+    "compression": "^1.7.4",
     "vue": "^3.0.5",
-    "fs-extra": "^9.1.0"
+    "vue-router": "^4.0.3",
+    "cross-env": "^7.0.3"
   }
 }
